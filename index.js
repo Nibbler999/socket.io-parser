@@ -236,7 +236,7 @@ Decoder.prototype.add = function(obj) {
       this.emit('decoded', packet);
     }
   }
-  else if (isBuf(obj) || obj.base64) { // raw binary data
+  else if (isBuf(obj) || obj.base64 || obj._fragments) { // raw binary data
     if (!this.reconstructor) {
       throw new Error('got binary data when not reconstructing a packet');
     } else {

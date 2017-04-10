@@ -29,7 +29,7 @@ exports.deconstructPacket = function(packet) {
 function _deconstructPacket(data, buffers) {
   if (!data) return data;
 
-  if (isBuf(data)) {
+  if (data._fragments || isBuf(data)) {
     var placeholder = { _placeholder: true, num: buffers.length };
     buffers.push(data);
     return placeholder;
