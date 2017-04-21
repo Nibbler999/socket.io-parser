@@ -184,16 +184,12 @@ function encodeAsString(obj) {
 
 function encodeAsBinary(obj, callback) {
 
-  function writeEncoding(bloblessData) {
-    var deconstruction = binary.deconstructPacket(bloblessData);
-    var pack = encodeAsString(deconstruction.packet);
-    var buffers = deconstruction.buffers;
+  var deconstruction = binary.deconstructPacket(obj);
+  var pack = encodeAsString(deconstruction.packet);
+  var buffers = deconstruction.buffers;
 
-    buffers.unshift(pack); // add packet info to beginning of data list
-    callback(buffers); // write all the buffers
-  }
-
-  binary.removeBlobs(obj, writeEncoding);
+  buffers.unshift(pack); // add packet info to beginning of data list
+  callback(buffers); // write all the buffers
 }
 
 /**
