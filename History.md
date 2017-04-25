@@ -1,4 +1,21 @@
 
+3.1.1 / 2017-04-25
+==================
+
+  * [fix] Ensure globals are functions before running `instanceof` (#68)
+
+3.1.0 / 2017-04-24
+==================
+
+  * [chore] Bump debug to version 2.6.4 (#67)
+  * [feat] Move binary detection to the parser (#66)
+
+3.0.0 / 2017-04-04
+==================
+
+  * [chore] Bump isarray to version 2.0.1 (#65)
+  * [chore] Use native JSON and drop support for older nodejs versions (#64)
+
 2.3.2 / 2016-12-30
 ==================
 
