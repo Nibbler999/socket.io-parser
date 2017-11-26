@@ -1,6 +1,6 @@
 {
   "name": "socket.io-parser",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "description": "socket.io protocol parser",
   "repository": {
     "type": "git",
@@ -14,7 +14,7 @@
   "dependencies": {
     "debug": "~2.6.4",
     "component-emitter": "1.2.1",
-    "has-binary": "Nibbler999/has-binary",
+    "has-binary2": "~1.0.2",
     "isarray": "2.0.1"
   },
   "devDependencies": {
